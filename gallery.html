@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALLERY | Tiny Flex Homes</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-left">
+                    <span><i class="fas fa-envelope"></i> info@tinyflexhomes.com.au</span>
+                    <span><i class="fas fa-clock"></i> Mon-Fri 9am-5pm</span>
+                </div>
+                <div class="top-bar-right">
+                    <span><i class="fas fa-check-circle"></i> NSW Building Compliant</span>
+                    <span><i class="fas fa-award"></i> Australian Buying Agent</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-home"></i>
+                    <i class="fas fa-expand-arrows-alt"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">TINY FLEX HOMES</span>
+                    <span class="logo-tagline">Expandable Container Home Specialists</span>
+                </div>
+            </a>
+            <div class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="gallery.html" class="active">Gallery</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="process.html">Our Process</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="nav-cta">Get Free Quote</a>
+            </div>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="process.html">Our Process</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Get Free Quote</a>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>GALLERY</h1>
+            <p>Page under construction - researching competitor content - not regular houses</p>
+        </div>
+    </section>
+
+    <!-- Models Content -->
+    <section class="page-content">
+        <div class="container">
+            <div class="content-note">
+                <p><i class="fas fa-info-circle"></i> <strong>Note:</strong> This page is under construction. We're researching competitor processes to create the best expandable home models page. Check back soon!</p>
+            </div>
+            
+            <div class="coming-soon">
+                <i class="fas fa-tools"></i>
+                <h2>Models Page Coming Soon</h2>
+                <p>We're analyzing competitor websites to create the most comprehensive expandable container models page.</p>
+                <p>In the meantime, view our featured models on the homepage or contact us for detailed information.</p>
+                <a href="index.html" class="btn btn-primary">Back to Homepage</a>
+                <a href="contact.html" class="btn btn-secondary">Contact for Model Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-home"></i>
+                            <i class="fas fa-expand-arrows-alt"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-main">TINY FLEX HOMES</span>
+                            <span class="logo-tagline">Expandable Container Home Specialists</span>
+                        </div>
+                    </div>
+                    <p class="footer-about">
+                        Australian buying agent specializing in premium expandable container homes.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="models.html">Expandable Models</a></li>
+                        <li><a href="gallery.html">Project Gallery</a></li>
+                        <li><a href="process.html">Buying Agent Process</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact & Quote</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-envelope"></i> info@tinyflexhomes.com.au</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9am-5pm</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Sydney & NSW Wide</li>
+                        <li><i class="fas fa-id-card"></i> ABN: 58 684 356 536</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TINY FLEX PTY LTD. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+                mobileMenuBtn.innerHTML = mobileMenu.classList.contains('active') 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+            });
+        });
+    </script>
+</body>
+</html>
