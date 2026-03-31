@@ -10,10 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?v=202603310730">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?v=202603311154">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.min.css?v=202603310730">
+    <link rel="stylesheet" href="css/style.min.css?v=202603311154">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
@@ -38,7 +38,7 @@
 }
 </script>
 
-    <link rel="stylesheet" href="css/mobile_optimization.css?v=202603310730">
+    <link rel="stylesheet" href="css/mobile_optimization.css?v=202603311154">
     <!-- Prevent caching during updates -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -65,8 +65,10 @@
             <!-- Logo -->
             <a class="navbar-brand" href="index.html">
                 <div class="d-flex align-items-center">
-                    <div class="logo-icon bg-primary text-white rounded d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
-                        <i class="fas fa-expand-arrows-alt fa-lg"></i>
+                    <div class="logo-container me-3">
+                        <div class="logo-icon">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                        </div>
                     </div>
                     <div>
                         <h1 class="logo-title mb-0">TinyFlex</h1>
@@ -109,6 +111,54 @@
     </nav>
 </header>
 
+
+    <!-- Hero Slider -->
+    <section class="hero-slider">
+        <div class="slides">
+            <!-- Slide 1 - MAIN HERO -->
+            <div class="slide active" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('local_images/modern-container-home-1-optimized.jpg?v=2');">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Premium Expandable Container Homes</h1>
+                        <p class="hero-subtitle"><strong>Australian buying agent</strong> for premium expandable container homes. Customizable designs delivered in 12-14 weeks.</p>
+                        <div class="hero-buttons">
+                            <a href="models.html" class="btn btn-primary">
+                                <i class="fas fa-home"></i> View Models
+                            </a>
+                            <a href="contact.html" class="btn btn-outline-light">
+                                <i class="fas fa-comment-dots"></i> Get Quote
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 2 - EXPANDABLE DESIGN -->
+            <div class="slide" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('local_images/container-exterior-3-optimized.jpg?v=2');">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Expandable Homes<br><span class="highlight">That Actually Expand</span></h1>
+                        <p class="hero-subtitle"><strong>Real expandable container homes</strong> - slides open to double your living space. Not regular houses - actual container expandable designs.</p>
+                        <div class="hero-buttons">
+                            <a href="process.html" class="btn btn-primary">
+                                <i class="fas fa-expand-arrows-alt"></i> How It Works
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+            <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+            </div>
+            <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
 <section class="trust-badges">
         <div class="container py-3">
             <div class="badge-grid">
