@@ -1,0 +1,275 @@
+/* Proper Professional Header CSS */
+
+/* Navbar */
+.navbar {
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar.fixed-top {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Logo */
+.logo-simple .logo-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #4a6fa5, #2c5282);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(74, 111, 165, 0.2);
+}
+
+.logo-simple .logo-icon i {
+    font-size: 20px;
+    color: white;
+}
+
+.navbar-brand span {
+    background: linear-gradient(135deg, #2c5282, #4a6fa5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.navbar-brand small {
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+}
+
+/* Nav Links */
+.navbar-nav .nav-link {
+    position: relative;
+    padding: 0.5rem 0 !important;
+    margin: 0 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #4a6fa5, #2c5282);
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #2c5282 !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: #2c5282 !important;
+    font-weight: 600;
+}
+
+/* Get Quote Button */
+.navbar-nav .btn-primary {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem !important;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(72, 187, 120, 0.3);
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .btn-primary:hover {
+    background: linear-gradient(135deg, #38a169, #2f855a);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(72, 187, 120, 0.4);
+}
+
+.navbar-nav .btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Mobile Menu Button */
+.navbar-toggler {
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 2px rgba(74, 111, 165, 0.25);
+}
+
+/* Mobile Menu */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 0.75rem 0;
+    }
+    
+    .navbar-collapse {
+        background: white;
+        border-radius: 10px;
+        padding: 1.5rem;
+        margin-top: 1rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar-nav {
+        text-align: center;
+    }
+    
+    .navbar-nav .nav-item {
+        margin: 0.5rem 0;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem !important;
+        margin: 0;
+    }
+    
+    .navbar-nav .btn-primary {
+        margin-top: 1rem;
+        width: 100%;
+    }
+    
+    .logo-simple .logo-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .logo-simple .logo-icon i {
+        font-size: 18px;
+    }
+    
+    .navbar-brand span {
+        font-size: 1.25rem;
+    }
+    
+    .navbar-brand small {
+        font-size: 0.7rem;
+    }
+}
+
+/* Scroll behavior */
+.navbar.scrolled {
+    padding: 0.5rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .logo-simple .logo-icon {
+    width: 35px;
+    height: 35px;
+}
+
+.navbar.scrolled .logo-simple .logo-icon i {
+    font-size: 18px;
+}
+
+.navbar.scrolled .navbar-brand span {
+    font-size: 1.25rem;
+}
+
+/* Active page highlighting */
+.home-page .navbar-nav .nav-link[href="index.html"],
+.models-page .navbar-nav .nav-link[href="models.html"],
+.gallery-page .navbar-nav .nav-link[href="gallery.html"],
+.process-page .navbar-nav .nav-link[href="process.html"],
+.about-page .navbar-nav .nav-link[href="about.html"],
+.contact-page .navbar-nav .nav-link[href="contact.html"] {
+    color: #2c5282 !important;
+    font-weight: 600;
+}
+
+.home-page .navbar-nav .nav-link[href="index.html"]::after,
+.models-page .navbar-nav .nav-link[href="models.html"]::after,
+.gallery-page .navbar-nav .nav-link[href="gallery.html"]::after,
+.process-page .navbar-nav .nav-link[href="process.html"]::after,
+.about-page .navbar-nav .nav-link[href="about.html"]::after,
+.contact-page .navbar-nav .nav-link[href="contact.html"]::after {
+    width: 100%;
+}
+
+/* Animation for navbar */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.navbar {
+    animation: slideDown 0.5s ease-out;
+}
+
+/* Print styles */
+@media print {
+    .navbar {
+        position: static !important;
+        box-shadow: none !important;
+        border-bottom: 2px solid #2c5282 !important;
+    }
+    
+    .navbar-toggler {
+        display: none !important;
+    }
+    
+    .navbar-collapse {
+        display: block !important;
+    }
+    
+    .navbar-nav .btn-primary {
+        background: #2c5282 !important;
+        color: white !important;
+        -webkit-print-color-adjust: exact;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .navbar,
+    .navbar-nav .nav-link,
+    .navbar-nav .btn-primary,
+    .navbar.scrolled {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    .navbar {
+        background: #1a1a1a !important;
+        border-bottom-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .navbar-brand span {
+        color: white !important;
+        -webkit-text-fill-color: white !important;
+        background: none !important;
+    }
+    
+    .navbar-nav .nav-link {
+        color: #e0e0e0 !important;
+    }
+    
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+        color: white !important;
+    }
+    
+    .navbar-nav .nav-link::after {
+        background: linear-gradient(135deg, #5a86c9, #3a6cb0);
+    }
+    
+    .navbar-collapse {
+        background: #2a2a2a !important;
+    }
+}
