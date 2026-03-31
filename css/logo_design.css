@@ -1,0 +1,207 @@
+/* Tiny Flex Logo Design - 3D Slick Unique Logo */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+.logo-container:hover {
+    transform: translateY(-2px);
+}
+
+/* 3D Logo Icon */
+.logo-icon {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #4a6fa5 0%, #2c5282 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+        0 4px 15px rgba(44, 82, 130, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        0 0 0 2px rgba(255, 255, 255, 0.1);
+    animation: float 3s ease-in-out infinite;
+}
+
+.logo-icon::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, #4a6fa5, #2c5282, #4a6fa5);
+    border-radius: 14px;
+    z-index: -1;
+    opacity: 0.5;
+    filter: blur(4px);
+}
+
+.logo-icon i {
+    font-size: 24px;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Logo Text */
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text strong {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, #2c5282 0%, #4a6fa5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.5px;
+    line-height: 1;
+}
+
+.logo-text small {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.75rem;
+    color: #666;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+}
+
+/* 3D Effects */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+        box-shadow: 
+            0 4px 15px rgba(44, 82, 130, 0.3),
+            inset 0 1px 0 rgba(255, 255, 255, 0.2),
+            0 0 0 2px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+        transform: translateY(-5px) rotate(2deg);
+        box-shadow: 
+            0 8px 25px rgba(44, 82, 130, 0.4),
+            inset 0 1px 0 rgba(255, 255, 255, 0.3),
+            0 0 0 2px rgba(255, 255, 255, 0.2);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.9;
+    }
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .logo-icon i {
+        font-size: 20px;
+    }
+    
+    .logo-text strong {
+        font-size: 1.2rem;
+    }
+    
+    .logo-text small {
+        font-size: 0.7rem;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .logo-icon {
+        background: linear-gradient(135deg, #5a86c9 0%, #3a6cb0 100%);
+        box-shadow: 
+            0 4px 15px rgba(90, 134, 201, 0.4),
+            inset 0 1px 0 rgba(255, 255, 255, 0.3),
+            0 0 0 2px rgba(255, 255, 255, 0.2);
+    }
+    
+    .logo-text strong {
+        background: linear-gradient(135deg, #5a86c9 0%, #3a6cb0 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .logo-text small {
+        color: #aaa;
+    }
+}
+
+/* Hover effects */
+.navbar-brand:hover .logo-icon {
+    animation: spin 0.5s ease;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Logo variations for different pages */
+.home-page .logo-icon {
+    background: linear-gradient(135deg, #4a6fa5 0%, #2c5282 100%);
+}
+
+.models-page .logo-icon {
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+}
+
+.gallery-page .logo-icon {
+    background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
+}
+
+.contact-page .logo-icon {
+    background: linear-gradient(135deg, #9f7aea 0%, #805ad5 100%);
+}
+
+/* Loading animation */
+.logo-loading {
+    animation: loading 1.5s ease-in-out infinite;
+}
+
+@keyframes loading {
+    0%, 100% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+}
+
+/* Print styles */
+@media print {
+    .logo-icon {
+        box-shadow: none;
+        border: 2px solid #2c5282;
+    }
+    
+    .logo-text strong {
+        color: #2c5282 !important;
+        -webkit-text-fill-color: #2c5282 !important;
+    }
+}
