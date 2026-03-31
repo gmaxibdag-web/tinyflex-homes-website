@@ -10,10 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?v=202603310604">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?v=202603310613">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.min.css?v=202603310604">
+    <link rel="stylesheet" href="css/style.min.css?v=202603310613">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
@@ -37,7 +37,7 @@
 }
 </script>
 
-    <link rel="stylesheet" href="css/mobile_optimization.css?v=202603310604">
+    <link rel="stylesheet" href="css/mobile_optimization.css?v=202603310613">
     <!-- Prevent caching during updates -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -46,106 +46,45 @@
     
     
     
-    <link rel="stylesheet" href="css/professional-header.css">
+    
+    <link rel="stylesheet" href="css/simple-header.css">
 </head>
 <body>
     
         </div>
     </div>
 
-    <!-- Navigation - Clean Professional Design -->
-<header class="header">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <!-- Logo -->
-            <a class="navbar-brand" href="index.html">
-                <div class="logo-wrapper">
-                    <div class="logo-mark">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="4" y="4" width="24" height="24" rx="4" fill="#2C5282"/>
-                            <path d="M12 12H20V20H12V12Z" fill="white"/>
-                            <path d="M16 8V24M8 16H24" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <div class="logo-text">
-                        <span class="logo-name">TinyFlex</span>
-                        <span class="logo-tagline">Expandable Homes</span>
-                    </div>
-                </div>
-            </a>
-            
-            <!-- Mobile Toggle -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <!-- Navigation -->
-            <div class="collapse navbar-collapse" id="mainNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="models.html">Models</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="gallery.html">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="process.html">Process</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="btn btn-primary btn-cta" href="contact.html">
-                            Get Quote
-                        </a>
-                    </li>
-                </ul>
-            </div>
+    <!-- Simple Working Header -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <span class="fw-bold fs-4 text-primary">TinyFlex</span>
+            <small class="d-block text-muted">Expandable Homes</small>
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="models.html">Models</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="process.html">Process</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item ms-2">
+                    <a class="btn btn-primary" href="contact.html">Get Quote</a>
+                </li>
+            </ul>
         </div>
-    </nav>
-</header>
+    </div>
+</nav>
 
-<!-- Spacer for fixed navbar -->
-<div style="height: 80px;"></div>
+
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <a href="index.html" class="active">Home</a>
-        <a href="models.html">Models</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="process.html">Our Process</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Get Free Quote</a>
-    </div>
-
-    <!-- Hero Section - COMPLETELY NEW PHOTOS -->
-    <section class="hero">
-        <div class="hero-slider">
-            <!-- Slide 1 - expandable home EXPANDABLE -->
-            <div class="slide active" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('local_images/modern-container-home-1-optimized.jpg?v=2');">
-                <div class="container py-3">
-                    <div class="hero-content">
-        <h1>Premium Expandable Container Homes in Australia</h1>
-                        <div class="hero-badge">Australian Buying Agent</div>
-                        <h1 class="hero-title">Premium Expandable<br><span class="highlight">expandable home Homes</span></h1>
-                        <p class="hero-subtitle"><strong>Actual expandable homes that expand</strong> - not regular houses. We source and customize high-quality expandable container homes from trusted manufacturers.</p>
-                        <div class="hero-stats">
-                            <div class="stat">
-                                <span class="stat-number">12-14</span>
-                                <span class="stat-label">Weeks Custom</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">4-6</span>
-                                <span class="stat-label">Weeks Stock</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">40%</span>
-                                <span class="stat-label">Cost Saving</span>
-                            </div>
-                        </div>
+    
                         <div class="hero-buttons">
                             <a href="models.html" class="btn btn-primary">
                                 <i class="fas fa-home"></i> View Container Models
@@ -557,6 +496,6 @@
     </script>
     
     
-    <script src="js/professional-header.js"></script>
+    
 </body>
 </html>
