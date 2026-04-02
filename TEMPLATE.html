@@ -1,0 +1,148 @@
+# TINYFLEX HOMES - STANDARD TEMPLATE
+# ===========================================
+# Standard Ops: All pages use this structure
+# 
+# TO CREATE NEW PAGE:
+# 1. Copy this template
+# 2. Update:
+#    - Page title (<title>...</title>)
+#    - Meta description
+#    - Navigation active state
+#    - Page hero section
+#    - Main content
+# 3. Save as new HTML file
+# 4. Add to navigation in all pages
+
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGE TITLE | TinyFlex Homes - Expandable Container Homes Australia</title>
+    <meta name="description" content="PAGE DESCRIPTION">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="PAGE TITLE | TinyFlex Homes">
+    <meta property="og:description" content="PAGE DESCRIPTION">
+    <meta property="og:image" content="https://tinyflexhomes.com.au/images/og-image.jpg">
+    <meta property="og:url" content="https://tinyflexhomes.com.au">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PAGE TITLE | TinyFlex Homes">
+    <meta name="twitter:description" content="PAGE DESCRIPTION">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css?v=VERSION">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "TinyFlex Homes",
+      "description": "Sustainable expandable container homes in Australia",
+      "url": "https://tinyflexhomes.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Australia"
+      },
+      "areaServed": "Australia"
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <span class="brand-text">TinyFlex</span>
+                <span class="brand-sub">Homes</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="models.html">Models</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="process.html">Process</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-primary" href="index.html#contact">Get Quote</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO SECTION -->
+    <!-- Replace this with page-specific hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="hero-title">PAGE TITLE</h1>
+            <p class="hero-subtitle">PAGE SUBTITLE</p>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <!-- Replace everything below with page-specific content -->
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title">Page Content</h2>
+            <p>Add your page content here...</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>TinyFlex Homes</h5>
+                    <p>Sustainable expandable container homes for modern Australian living.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="models.html">Models</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="process.html">Process</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>info@tinyflexhomes.com.au<br>
+                    1300 TINY FLEX<br>
+                    Australia-wide service</p>
+                </div>
+            </div>
+            <div class="footer-bottom text-center mt-4 pt-4 border-top">
+                <p>&copy; 2026 TinyFlex Homes. All rights reserved. | NSW Building Compliant</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js?v=VERSION"></script>
+</body>
+</html>
