@@ -157,6 +157,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Add loaded class to all regular images (not lazy loaded)
+    document.querySelectorAll('img:not([data-src])').forEach(img => {
+        // Check if image is already loaded
+        if (img.complete) {
+            img.classList.add('loaded');
+        } else {
+            img.addEventListener('load', function() {
+                this.classList.add('loaded');
+            });
+            img.addEventListener('error', function() {
+                // Still show image even if error
+                this.classList.add('loaded');
+            });
+        }
+    });
+    
     // Add loading class to body for initial load
     document.body.classList.add('loaded');
 });
