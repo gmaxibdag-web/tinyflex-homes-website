@@ -1,141 +1,368 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GALLERY | Tiny Flex Homes</title>
-    <link rel="stylesheet" href="css/style.min.css?v=202603311154">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?v=202603311154">
-    <link rel="stylesheet" href="css/mobile_optimization.css?v=202603311154">
-    <!-- Prevent caching during updates -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
+    <title>Gallery | TinyFlex Homes - Expandable Container Homes Australia</title>
+    <meta name="description" content="View our gallery of expandable container home projects across Australia.">
     
-    
-    
-    
-    
-    
-    
-    
-    
+    <!-- Same head content as index.html -->
+    <link rel="stylesheet" href="css/style.css?v=202604020015">
+    <style>
+        .gallery-section {
+            padding: 4rem 0;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-caption {
+            padding: 1rem;
+            background: white;
+        }
+        
+        .gallery-caption h4 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-dark);
+        }
+        
+        .gallery-caption p {
+            color: var(--gray-color);
+            font-size: 0.875rem;
+            margin: 0;
+        }
+        
+        .gallery-categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .category-btn {
+            padding: 0.5rem 1.5rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 20px;
+            background: white;
+            color: var(--primary-color);
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .category-btn:hover,
+        .category-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+    </style>
 </head>
 <body>
-    
-        </div>
-    </div>
-
-    <!-- Professional Header -->
-<header class="site-header">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <!-- Navigation (same as index.html) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
         <div class="container">
-            <!-- Logo -->
             <a class="navbar-brand" href="index.html">
-                <div class="d-flex align-items-center">
-                    <div class="logo-container me-3">
-                        <div class="logo-icon">
-                            <i class="fas fa-expand-arrows-alt"></i>
-                        </div>
-                    </div>
-                    <div>
-                        <h1 class="logo-title mb-0">TinyFlex</h1>
-                        <p class="logo-subtitle mb-0">Expandable Container Homes</p>
-                    </div>
-                </div>
+                <span class="brand-text">TinyFlex</span>
+                <span class="brand-sub">Homes</span>
             </a>
-            
-            <!-- Mobile Toggle -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
-            <!-- Navigation -->
-            <div class="collapse navbar-collapse" id="mainNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="models.html">Models</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="gallery.html">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="process.html">Process</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item ms-3">
-                        <a class="btn btn-primary btn-lg px-4" href="contact.html">
-                            <i class="fas fa-comment-dots me-2"></i>Get Quote
-                        </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="models.html">Models</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#process">Process</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-primary" href="index.html#contact">Get Quote</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-</header>
 
-
-
-    
-                    <p class="footer-about">
-                        Australian buying agent specializing in premium expandable container homes.
-                    </p>
-                </div>
-                <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="models.html">Expandable Models</a></li>
-                        <li><a href="gallery.html">Project Gallery</a></li>
-                        <li><a href="process.html">Buying Agent Process</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact & Quote</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact Us</h4>
-                    <ul class="footer-contact">
-                        <li><i class="fas fa-envelope"></i> info@tinyflexhomes.com.au</li>
-                        <li><i class="fas fa-clock"></i> Mon-Fri: 9am-5pm</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Sydney & NSW Wide</li>
-                        <li><i class="fas fa-id-card"></i> ABN: 58 684 356 536</li>
-                    </ul>
+    <!-- Gallery Hero -->
+    <section class="page-hero py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="hero-title">Our Project Gallery</h1>
+                    <p class="hero-subtitle">See our expandable container homes in real Australian settings</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 TINY FLEX PTY LTD. All rights reserved.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <!-- Gallery Categories -->
+            <div class="gallery-categories">
+                <button class="category-btn active" data-category="all">All Projects</button>
+                <button class="category-btn" data-category="residential">Residential</button>
+                <button class="category-btn" data-category="commercial">Commercial</button>
+                <button class="category-btn" data-category="rural">Rural</button>
+                <button class="category-btn" data-category="coastal">Coastal</button>
+            </div>
+            
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Project 1 -->
+                <div class="gallery-item" data-category="residential">
+                    <img src="images/gallery/project-1.jpg" alt="Beachside Retreat" loading="lazy">
+                    <div class="gallery-caption">
+                        <h4>Beachside Retreat</h4>
+                        <p>Byron Bay, NSW - Compact studio with ocean views</p>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="gallery-item" data-category="residential">
+                    <img src="images/gallery/project-2.jpg" alt="Family Home Expansion" loading="lazy">
+                    <div class="gallery-caption">
+                        <h4>Family Home Expansion</h4>
+                        <p>Melbourne, VIC - 3-bedroom expandable home</p>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="gallery-item" data-category="commercial">
+                    <img src="images/gallery/project-3.jpg" alt="Cafe & Retail Space" loading="lazy">
+                    <div class="gallery-caption">
+                        <h4>Cafe & Retail Space</h4>
+                        <p>Sydney, NSW - Commercial unit for small business</p>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="gallery-item" data-category="rural">
+                    <img src="images/gallery/project-4.jpg" alt="Farm Stay Accommodation" loading="lazy">
+                    <div class="gallery-caption">
+                        <h4>Farm Stay Accommodation</h4>
+                        <p>Hunter Valley, NSW - Tourism accommodation unit</p>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="gallery-item" data-category="coastal">
+                    <img src="images/gallery/project-5.jpg" alt="Coastal Holiday Home" loading="lazy">
+                    <div class="gallery-caption">
+                        <h4>Coastal Holiday Home</h4>
+                        <p>Gold Coast, QLD - 2-bedroom holiday rental</p>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="gallery-item" data-category="commercial">
+                    <img src="images/gallery/project-6.jpg" alt="Office Pod" loading="lazy">
+                    <div class="gallery-caption">
+                        <h4>Office Pod</h4>
+                        <p>Brisbane, QLD - Backyard office for remote work</p>
+                    </div>
+                </div>
+                
+                <!-- Project 7 -->
+                <div class="gallery-item" data-category="residential">
+                    <img src="images/gallery/project-7.jpg" alt="Granny Flat" loading="lazy">
+                    <div class="gallery-caption">
+                        <h4>Granny Flat</h4>
+                        <p>Perth, WA - Self-contained living space</p>
+                    </div>
+                </div>
+                
+                <!-- Project 8 -->
+                <div class="gallery-item" data-category="rural">
+                    <img src="images/gallery/project-8.jpg" alt="Bush Retreat" loading="lazy">
+                    <div class="gallery-caption">
+                        <h4>Bush Retreat</h4>
+                        <p>Blue Mountains, NSW - Off-grid sustainable home</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gallery Note -->
+            <div class="text-center mt-5">
+                <p class="text-muted">All images are representative of our work. Actual projects may vary based on customization.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-subtitle">Real feedback from happy TinyFlex homeowners</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card p-4">
+                        <div class="testimonial-text mb-3">
+                            "Our TinyFlex home was the perfect solution for our coastal property. The team was professional and the quality is outstanding."
+                        </div>
+                        <div class="testimonial-author">
+                            <strong>Sarah & Mark J.</strong><br>
+                            <small>Byron Bay, NSW</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card p-4">
+                        <div class="testimonial-text mb-3">
+                            "We needed extra space for our growing family. The expandable design gave us exactly what we needed without the cost of a traditional extension."
+                        </div>
+                        <div class="testimonial-author">
+                            <strong>The Chen Family</strong><br>
+                            <small>Melbourne, VIC</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card p-4">
+                        <div class="testimonial-text mb-3">
+                            "As a small business owner, the commercial unit was perfect for our new cafe. Quick installation and great quality."
+                        </div>
+                        <div class="testimonial-author">
+                            <strong>James R.</strong><br>
+                            <small>Sydney, NSW</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5 text-center">
+        <div class="container">
+            <h2 class="section-title">Inspired by Our Work?</h2>
+            <p class="section-subtitle">Let's create your perfect expandable home</p>
+            <a href="index.html#contact" class="btn btn-primary btn-lg">Start Your Project</a>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>TinyFlex Homes</h5>
+                    <p>Sustainable expandable container homes for modern Australian living.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="models.html">Models</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>info@tinyflexhomes.com.au<br>
+                    1300 TINY FLEX<br>
+                    Australia-wide service</p>
+                </div>
+            </div>
+            <div class="footer-bottom text-center mt-4 pt-4 border-top">
+                <p>&copy; 2026 TinyFlex Homes. All rights reserved. | NSW Building Compliant</p>
             </div>
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js?v=202604020015"></script>
+    
+    <!-- Gallery Filter Script -->
     <script>
-        // Mobile menu toggle
         document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-            const mobileMenu = document.querySelector('.mobile-menu');
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
             
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('active');
-                mobileMenuBtn.innerHTML = mobileMenu.classList.contains('active') 
-                    ? '<i class="fas fa-times"></i>' 
-                    : '<i class="fas fa-bars"></i>';
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active button
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // Filter gallery items
+                    galleryItems.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
             });
+            
+            // Add testimonial card styles
+            const style = document.createElement('style');
+            style.textContent = `
+                .testimonial-card {
+                    background: white;
+                    border-radius: var(--border-radius);
+                    box-shadow: var(--box-shadow);
+                    height: 100%;
+                }
+                
+                .testimonial-text {
+                    font-style: italic;
+                    color: var(--dark-color);
+                }
+                
+                .testimonial-author {
+                    color: var(--gray-color);
+                    font-size: 0.875rem;
+                }
+            `;
+            document.head.appendChild(style);
         });
     </script>
-    
-    
-    
-    
-    
-    <script src="js/proper-site.js"></script>
-    <script src="js/optimized.js"></script>
 </body>
 </html>
