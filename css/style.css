@@ -81,13 +81,7 @@ a:hover {
     font-size: 1.5rem;
 }
 
-.brand-text {
-    color: var(--primary-color);
-}
-
-.brand-sub {
-    color: var(--secondary-color);
-}
+/* Old brand classes removed - Using new logo design */
 
 .nav-link {
     font-weight: 500;
@@ -578,4 +572,174 @@ html {
 .form-control:valid,
 .form-select:valid {
     border-color: #68d391;
+}/* TinyFlex Logo Styles */
+.tinyflex-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
+
+/* Main logo container shape */
+.logo-container {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    background: linear-gradient(135deg, #2c5282 0%, #4299e1 100%);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Expandable element (represents expanding home) */
+.logo-expand {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 4px;
+    top: 8px;
+    left: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Expanding animation effect */
+.logo-expand:before {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    top: -4px;
+    left: -4px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
+
+/* Logo text */
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-primary {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #2c5282;
+    letter-spacing: -0.5px;
+}
+
+.logo-secondary {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: #4a5568;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Logo hover effects */
+.tinyflex-logo:hover .logo-expand {
+    transform: scale(1.1);
+}
+
+.tinyflex-logo:hover .logo-primary {
+    color: #4299e1;
+}
+
+/* Logo for dark backgrounds */
+.logo-dark .logo-primary {
+    color: white;
+}
+
+.logo-dark .logo-secondary {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive logo */
+@media (max-width: 768px) {
+    .logo-icon {
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+    }
+    
+    .logo-container {
+        width: 32px;
+        height: 32px;
+        border-radius: 6px;
+    }
+    
+    .logo-expand {
+        width: 20px;
+        height: 20px;
+        top: 6px;
+        left: 6px;
+    }
+    
+    .logo-primary {
+        font-size: 1.25rem;
+    }
+    
+    .logo-secondary {
+        font-size: 0.75rem;
+    }
+}
+
+/* Logo in footer */
+.footer .tinyflex-logo {
+    margin-bottom: 1rem;
+}
+
+.footer .logo-text {
+    align-items: center;
+}
+
+/* Simple logo version (for very small screens) */
+.logo-simple {
+    display: none;
+}
+
+@media (max-width: 576px) {
+    .logo-full {
+        display: none;
+    }
+    
+    .logo-simple {
+        display: flex;
+        align-items: center;
+    }
+    
+    .logo-simple .logo-primary {
+        font-size: 1.1rem;
+    }
+    
+    .logo-simple .logo-secondary {
+        display: none;
+    }
 }
