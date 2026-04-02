@@ -572,8 +572,276 @@ html {
 .form-control:valid,
 .form-select:valid {
     border-color: #68d391;
-}/* TinyFlex Logo Styles */
+}/* ===========================================
+   TINYFLEX HOMES - PROFESSIONAL LOGO DESIGN
+   Based on logo design principles:
+   1. Simple - Clean geometric shapes
+   2. Memorable - Unique combination
+   3. Timeless - Classic, not trendy
+   4. Versatile - Works at any size
+   5. Appropriate - Represents expandable homes
+   =========================================== */
+
+/* Logo Container */
 .tinyflex-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s ease;
+}
+
+.tinyflex-logo:hover {
+    opacity: 0.9;
+}
+
+/* Logo Mark (Icon) */
+.logo-mark {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+/* Main Logo Symbol: House + Expansion Arrows */
+.logo-symbol {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* House Base (Simple rectangle) */
+.house-base {
+    position: absolute;
+    bottom: 0;
+    width: 28px;
+    height: 20px;
+    left: 6px;
+    background: #2c5282; /* Primary blue */
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+/* Roof (Simple triangle) */
+.house-roof {
+    position: absolute;
+    top: 0;
+    left: 4px;
+    width: 32px;
+    height: 20px;
+    background: #4299e1; /* Secondary blue */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* Expansion Arrows (Simple chevrons) */
+.expand-arrow-left,
+.expand-arrow-right {
+    position: absolute;
+    top: 10px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #2c5282;
+    border-top: none;
+    border-right: none;
+}
+
+.expand-arrow-left {
+    left: -6px;
+    transform: rotate(45deg);
+}
+
+.expand-arrow-right {
+    right: -6px;
+    transform: rotate(-135deg);
+}
+
+/* Door Detail (Simple vertical line) */
+.house-door {
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 1px;
+}
+
+/* Logo Text */
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-primary {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #2c5282;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+}
+
+.logo-secondary {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: #4a5568;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+/* Logo Variations */
+
+/* Dark background version */
+.logo-dark .logo-primary {
+    color: white;
+}
+
+.logo-dark .logo-secondary {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Footer logo (centered) */
+.footer .tinyflex-logo {
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer .logo-mark {
+    margin-right: 0;
+    margin-bottom: 8px;
+}
+
+.footer .logo-text {
+    align-items: center;
+}
+
+/* Responsive Logo */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .logo-mark {
+        width: 36px;
+        height: 36px;
+        margin-right: 10px;
+    }
+    
+    .logo-primary {
+        font-size: 1.3rem;
+    }
+    
+    .logo-secondary {
+        font-size: 0.7rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .logo-mark {
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+    }
+    
+    .house-base {
+        width: 24px;
+        height: 16px;
+        left: 4px;
+    }
+    
+    .house-roof {
+        width: 28px;
+        height: 16px;
+        left: 2px;
+    }
+    
+    .expand-arrow-left,
+    .expand-arrow-right {
+        width: 10px;
+        height: 10px;
+        top: 8px;
+    }
+    
+    .logo-primary {
+        font-size: 1.1rem;
+    }
+    
+    .logo-secondary {
+        font-size: 0.65rem;
+        letter-spacing: 1px;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 576px) {
+    .logo-mark {
+        width: 28px;
+        height: 28px;
+        margin-right: 6px;
+    }
+    
+    .logo-primary {
+        font-size: 1rem;
+    }
+    
+    .logo-secondary {
+        font-size: 0.6rem;
+    }
+    
+    /* Hide secondary text on very small screens */
+    .logo-compact .logo-secondary {
+        display: none;
+    }
+}
+
+/* Logo Animation (Subtle, professional) */
+@keyframes logo-appear {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo-mark {
+    animation: logo-appear 0.5s ease-out;
+}
+
+/* Print styles */
+@media print {
+    .logo-mark {
+        filter: grayscale(100%);
+    }
+    
+    .house-base {
+        background: #333 !important;
+    }
+    
+    .house-roof {
+        background: #666 !important;
+    }
+    
+    .expand-arrow-left,
+    .expand-arrow-right {
+        border-color: #333 !important;
+    }
+}
+
+/* Logo Design Explanation:
+   1. HOUSE SHAPE: Clearly communicates "homes"
+   2. EXPANSION ARROWS: Clearly communicates "expandable"  
+   3. SIMPLE GEOMETRY: Clean, professional, timeless
+   4. BLUE COLOR SCHEME: Trust, reliability, professionalism
+   5. PROPER HIERARCHY: Primary text bold, secondary smaller
+*/.tinyflex-logo {
     display: flex;
     align-items: center;
     text-decoration: none;
