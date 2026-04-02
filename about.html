@@ -3,103 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | TinyFlex Homes - Sustainable Expandable Container Homes Australia</title>
-    <meta name="description" content="Learn about TinyFlex Homes - our mission, values, and commitment to sustainable expandable container homes in Australia.">
+    <title>TinyFlex Homes | Sustainable Expandable Container Homes Australia</title>
+    <meta name="description" content="Affordable, sustainable expandable container homes in Australia. Customizable, eco-friendly living solutions for residential, commercial & off-grid projects.">
     
-    <!-- Same head content as index.html -->
-    <link rel="stylesheet" href="css/style.css?v=202604020059">
-    <style>
-        .about-hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 8rem 0 4rem;
-            text-align: center;
-        }
-        
-        .about-section {
-            padding: 5rem 0;
-        }
-        
-        .about-section:nth-child(even) {
-            background-color: var(--light-color);
-        }
-        
-        .mission-values {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .value-card {
-            background: white;
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            text-align: center;
-        }
-        
-        .value-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-        
-        .team-section {
-            text-align: center;
-        }
-        
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .team-member {
-            background: white;
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-        }
-        
-        .team-member img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 1rem;
-            border: 5px solid var(--light-color);
-        }
-        
-        .stats-section {
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .stat-item h3 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        
-        .stat-item p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-    </style>
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="TinyFlex Homes | Sustainable Expandable Container Homes">
+    <meta property="og:description" content="Affordable, sustainable expandable container homes in Australia.">
+    <meta property="og:image" content="https://tinyflexhomes.com.au/images/og-image.jpg">
+    <meta property="og:url" content="https://tinyflexhomes.com.au">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TinyFlex Homes | Sustainable Expandable Container Homes">
+    <meta name="twitter:description" content="Affordable, sustainable expandable container homes in Australia.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css?v=202604020103">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "TinyFlex Homes",
+      "description": "Sustainable expandable container homes in Australia",
+      "url": "https://tinyflexhomes.com.au",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Australia"
+      },
+      "areaServed": "Australia"
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -114,7 +61,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="models.html">Models</a></li>
                     <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html#process">Process</a></li>
@@ -128,7 +75,16 @@
         </div>
     </nav>
 
+    <!-- Hero Slider Section -->
     <!-- About Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="hero-title">About TinyFlex Homes</h1>
+            <p class="hero-subtitle">Pioneering sustainable expandable living across Australia</p>
+        </div>
+    </section>
+    
+    
     <section class="about-hero">
         <div class="container">
             <h1 class="hero-title">About TinyFlex Homes</h1>
@@ -269,7 +225,9 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    
+    
+<!-- Footer -->
     <footer class="footer py-4">
         <div class="container">
             <div class="row">
@@ -280,11 +238,10 @@
                 <div class="col-md-4">
                     <h5>Quick Links</h5>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#home">Home</a></li>
                         <li><a href="models.html">Models</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="#process">Process</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -300,8 +257,10 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js?v=202604020059"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js?v=202604020103"></script>
 </body>
 </html>
