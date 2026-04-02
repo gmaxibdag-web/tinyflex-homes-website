@@ -30,7 +30,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css?v=202604020015">
+    <link rel="stylesheet" href="css/style.css?v=202604020027">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -75,39 +75,115 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="hero-title">Sustainable Expandable Container Homes</h1>
-                    <p class="hero-subtitle">Affordable, eco-friendly living solutions for modern Australia</p>
-                    <div class="hero-features">
-                        <div class="feature-item">
-                            <span class="feature-icon">✓</span>
-                            <span>Customizable Designs</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">✓</span>
-                            <span>Fast Installation</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">✓</span>
-                            <span>Australia-Wide Delivery</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">✓</span>
-                            <span>Eco-Friendly Materials</span>
-                        </div>
+    <!-- Hero Slider Section -->
+    <section id="home" class="hero-slider-section">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+            </div>
+            
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="carousel-image" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
+                        <div class="carousel-overlay"></div>
                     </div>
-                    <div class="hero-cta mt-4">
-                        <a href="#models" class="btn btn-primary btn-lg me-3">View Models</a>
-                        <a href="#contact" class="btn btn-outline-primary btn-lg">Get Quote</a>
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <h1 class="hero-title">Sustainable Expandable Container Homes</h1>
+                            <p class="hero-subtitle">Transform your living space with innovative, eco-friendly designs</p>
+                            <a href="#models" class="btn btn-primary btn-lg">Explore Models</a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="hero-image-container">
-                        <img src="images/hero-home.jpg" alt="Modern expandable container home" class="img-fluid rounded shadow">
+                
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="carousel-image" style="background-image: url('https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
+                        <div class="carousel-overlay"></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <h1 class="hero-title">Customizable Designs</h1>
+                            <p class="hero-subtitle">Tailor every detail to match your lifestyle and preferences</p>
+                            <a href="#models" class="btn btn-primary btn-lg">View Customization</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="carousel-image" style="background-image: url('https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
+                        <div class="carousel-overlay"></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <h1 class="hero-title">Fast Installation</h1>
+                            <p class="hero-subtitle">Ready to live in just 6-8 weeks from order to completion</p>
+                            <a href="#process" class="btn btn-primary btn-lg">Our Process</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 4 -->
+                <div class="carousel-item">
+                    <div class="carousel-image" style="background-image: url('https://images.unsplash.com/photo-1600585154340-043788447ebf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');">
+                        <div class="carousel-overlay"></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <h1 class="hero-title">Australia-Wide Service</h1>
+                            <p class="hero-subtitle">Delivering sustainable homes across the entire country</p>
+                            <a href="#contact" class="btn btn-primary btn-lg">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        
+        <!-- Hero Features Below Slider -->
+        <div class="hero-features-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 feature-item">
+                        <div class="feature-icon">🏠</div>
+                        <div class="feature-text">
+                            <strong>Custom Designs</strong>
+                            <small>Tailored to your needs</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <div class="feature-text">
+                            <strong>Fast Installation</strong>
+                            <small>6-8 weeks completion</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 feature-item">
+                        <div class="feature-icon">🚚</div>
+                        <div class="feature-text">
+                            <strong>Nationwide Delivery</strong>
+                            <small>Australia-wide service</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3 feature-item">
+                        <div class="feature-icon">🌿</div>
+                        <div class="feature-text">
+                            <strong>Eco-Friendly</strong>
+                            <small>Sustainable materials</small>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -126,7 +202,7 @@
                 <!-- Model 1 -->
                 <div class="col-md-4 mb-4">
                     <div class="card model-card h-100">
-                        <img src="images/model-compact.jpg" class="card-img-top" alt="Compact Expandable Home">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Compact Expandable Home" loading="lazy">
                         <div class="card-body">
                             <h3 class="card-title">Compact Studio</h3>
                             <p class="card-text">Perfect for backyard offices, guest houses, or cozy retreats.</p>
@@ -150,7 +226,7 @@
                 <div class="col-md-4 mb-4">
                     <div class="card model-card h-100 featured">
                         <div class="featured-badge">Most Popular</div>
-                        <img src="images/model-family.jpg" class="card-img-top" alt="Family Expandable Home">
+                        <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Family Expandable Home" loading="lazy">
                         <div class="card-body">
                             <h3 class="card-title">Family Home</h3>
                             <p class="card-text">Spacious 2-3 bedroom home perfect for permanent living.</p>
@@ -174,7 +250,7 @@
                 <!-- Model 3 -->
                 <div class="col-md-4 mb-4">
                     <div class="card model-card h-100">
-                        <img src="images/model-commercial.jpg" class="card-img-top" alt="Commercial Expandable Home">
+                        <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Commercial Expandable Home" loading="lazy">
                         <div class="card-body">
                             <h3 class="card-title">Commercial Unit</h3>
                             <p class="card-text">Ideal for offices, cafes, retail spaces, or tourism.</p>
@@ -324,6 +400,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- Custom JS -->
-    <script src="js/main.js?v=202604020015"></script>
+    <script src="js/main.js?v=202604020027"></script>
 </body>
 </html>

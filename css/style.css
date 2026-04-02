@@ -100,51 +100,191 @@ a:hover {
     color: var(--primary-color) !important;
 }
 
-/* Hero Section */
-.hero-section {
-    padding: 4rem 0;
-    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+/* Hero Slider Section */
+.hero-slider-section {
+    position: relative;
+    margin-top: -76px; /* Offset for fixed navbar */
+    padding-top: 76px;
 }
 
-.hero-title {
-    font-size: 3rem;
+.carousel {
+    height: 85vh;
+    min-height: 600px;
+    max-height: 800px;
+}
+
+.carousel-inner, .carousel-item {
+    height: 100%;
+}
+
+.carousel-image {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: auto;
+    left: 0;
+    right: 0;
+    text-align: left;
+    padding: 2rem;
+}
+
+.carousel-caption .hero-title {
+    font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.carousel-caption .hero-subtitle {
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.carousel-indicators {
+    bottom: 100px;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: rgba(255,255,255,0.5);
+    border: none;
+}
+
+.carousel-indicators button.active {
+    background-color: white;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 2rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Hero Features Bar */
+.hero-features-bar {
+    background-color: white;
+    padding: 2rem 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 10;
+}
+
+.hero-features-bar .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-right: 1px solid #e2e8f0;
+}
+
+.hero-features-bar .feature-item:last-child {
+    border-right: none;
+}
+
+.hero-features-bar .feature-icon {
+    font-size: 2rem;
+    min-width: 50px;
+}
+
+.hero-features-bar .feature-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-features-bar .feature-text strong {
+    font-size: 1.1rem;
     color: var(--primary-dark);
 }
 
-.hero-subtitle {
-    font-size: 1.25rem;
+.hero-features-bar .feature-text small {
     color: var(--gray-color);
-    margin-bottom: 2rem;
+    font-size: 0.875rem;
 }
 
-.hero-features {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+/* Responsive Hero */
+@media (max-width: 768px) {
+    .carousel {
+        height: 70vh;
+        min-height: 500px;
+    }
+    
+    .carousel-caption .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .carousel-caption .hero-subtitle {
+        font-size: 1.25rem;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px;
+        height: 40px;
+        margin: 0 1rem;
+    }
+    
+    .hero-features-bar .feature-item {
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .hero-features-bar .feature-item:last-child {
+        border-bottom: none;
+    }
 }
 
-.feature-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: 500;
-}
-
-.feature-icon {
-    color: var(--secondary-color);
-    font-weight: bold;
-}
-
-.hero-image-container {
-    position: relative;
-}
-
-.hero-image-container img {
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+@media (max-width: 576px) {
+    .carousel {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .carousel-caption .hero-title {
+        font-size: 2rem;
+    }
+    
+    .carousel-caption .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .carousel-indicators {
+        bottom: 80px;
+    }
 }
 
 /* Section Styles */
