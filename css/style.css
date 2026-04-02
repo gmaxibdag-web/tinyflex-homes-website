@@ -587,56 +587,96 @@ html {
     margin-right: 12px;
 }
 
-/* Main logo container shape */
-.logo-container {
+/* Main logo - House shape that expands */
+.logo-house {
     width: 40px;
     height: 40px;
     position: relative;
+}
+
+/* House base (expandable container) */
+.logo-base {
+    position: absolute;
+    bottom: 0;
+    width: 32px;
+    height: 20px;
     background: linear-gradient(135deg, #2c5282 0%, #4299e1 100%);
-    border-radius: 8px;
+    border-radius: 4px 4px 0 0;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Expandable element (represents expanding home) */
+/* Expanding roof/section */
 .logo-expand {
     position: absolute;
-    width: 24px;
-    height: 24px;
-    background: white;
-    border-radius: 4px;
-    top: 8px;
+    top: 0;
     left: 8px;
+    width: 24px;
+    height: 20px;
+    background: white;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform-origin: bottom;
     transition: all 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Expanding animation effect */
-.logo-expand:before {
+/* Expansion lines/arrows */
+.logo-expand:before,
+.logo-expand:after {
     content: '';
     position: absolute;
-    width: 32px;
-    height: 32px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 6px;
-    top: -4px;
-    left: -4px;
-    animation: pulse 2s infinite;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #2c5282;
+    border-top: none;
+    border-right: none;
 }
 
-@keyframes pulse {
+.logo-expand:before {
+    bottom: -4px;
+    left: -8px;
+    transform: rotate(45deg);
+}
+
+.logo-expand:after {
+    bottom: -4px;
+    right: -8px;
+    transform: rotate(-45deg);
+}
+
+/* Expansion animation */
+@keyframes expand {
     0% {
-        transform: scale(1);
-        opacity: 0.5;
+        transform: translateY(0) scaleY(1);
     }
     50% {
-        transform: scale(1.1);
-        opacity: 0.2;
+        transform: translateY(-4px) scaleY(1.2);
     }
     100% {
-        transform: scale(1);
-        opacity: 0.5;
+        transform: translateY(0) scaleY(1);
     }
+}
+
+.logo-expand {
+    animation: expand 3s ease-in-out infinite;
+}
+
+/* Hover effect - house expands more */
+.tinyflex-logo:hover .logo-expand {
+    animation: expand 1s ease-in-out infinite;
+    transform: translateY(-6px) scaleY(1.3);
+}
+
+/* Door/window detail */
+.logo-detail {
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
 }
 
 /* Logo text */
