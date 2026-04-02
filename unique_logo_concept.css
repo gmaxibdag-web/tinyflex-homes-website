@@ -1,0 +1,425 @@
+/* ===========================================
+   TINYFLEX HOMES - UNIQUE LOGO CONCEPT
+   Logo that clearly communicates:
+   1. TINY - Compact, efficient
+   2. FLEX - Flexible, expandable
+   3. HOMES - Container homes
+   =========================================== */
+
+/* Logo Container */
+.tinyflex-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+/* Logo Mark - Container that expands */
+.logo-mark {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-right: 14px;
+    flex-shrink: 0;
+}
+
+/* Main Container Shape - Shipping container */
+.container-base {
+    position: absolute;
+    width: 40px;
+    height: 24px;
+    background: linear-gradient(135deg, #2c5282 0%, #4299e1 100%);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(44, 82, 130, 0.2);
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Container details - Shipping container features */
+.container-corner {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 1px;
+}
+
+.container-corner-tl {
+    top: 4px;
+    left: 4px;
+}
+
+.container-corner-tr {
+    top: 4px;
+    right: 4px;
+}
+
+.container-corner-bl {
+    bottom: 4px;
+    left: 4px;
+}
+
+.container-corner-br {
+    bottom: 4px;
+    right: 4px;
+}
+
+/* Container door */
+.container-door {
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Expandable section - Slides out */
+.expandable-section {
+    position: absolute;
+    right: -20px;
+    top: 4px;
+    width: 0;
+    height: 16px;
+    background: linear-gradient(135deg, #4299e1 0%, #63b3ed 100%);
+    border-radius: 0 4px 4px 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s;
+    opacity: 0;
+}
+
+/* Expansion arrows */
+.expand-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border: 2px solid #2c5282;
+    border-top: none;
+    border-right: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.expand-arrow-left {
+    left: -6px;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.expand-arrow-right {
+    right: -6px;
+    transform: translateY(-50%) rotate(-135deg);
+}
+
+/* House transformation - Appears when expanded */
+.house-transform {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.house-roof {
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    width: 20px;
+    height: 12px;
+    background: linear-gradient(135deg, #e53e3e 0%, #f56565 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.house-window {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 1px;
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+
+.house-window-left {
+    top: 8px;
+    left: 10px;
+}
+
+.house-window-right {
+    top: 8px;
+    right: 10px;
+}
+
+/* HOVER EFFECTS - The transformation */
+
+/* Logo hover - Container expands */
+.tinyflex-logo:hover .container-base {
+    width: 60px;
+    height: 30px;
+    background: linear-gradient(135deg, #2c5282 0%, #3182ce 100%);
+}
+
+/* Expandable section slides out */
+.tinyflex-logo:hover .expandable-section {
+    width: 20px;
+    opacity: 1;
+    right: -24px;
+}
+
+/* Arrows appear */
+.tinyflex-logo:hover .expand-arrow {
+    opacity: 1;
+}
+
+.tinyflex-logo:hover .expand-arrow-left {
+    left: -12px;
+}
+
+.tinyflex-logo:hover .expand-arrow-right {
+    right: -12px;
+}
+
+/* House transformation appears */
+.tinyflex-logo:hover .house-transform {
+    opacity: 1;
+}
+
+.tinyflex-logo:hover .house-roof {
+    transform: scale(1);
+}
+
+.tinyflex-logo:hover .house-window {
+    transform: scale(1);
+}
+
+/* Door opens */
+.tinyflex-logo:hover .container-door {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/* Logo Text with transformation */
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo-primary {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.6rem;
+    color: #2c5282;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+/* "Tiny" part - smaller, compact */
+.logo-tiny {
+    font-size: 0.9em;
+    color: #4a5568;
+    transition: all 0.3s ease;
+}
+
+/* "Flex" part - expands on hover */
+.logo-flex {
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.logo-flex::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #4299e1, #2c5282);
+    transition: width 0.4s ease;
+}
+
+.tinyflex-logo:hover .logo-flex::after {
+    width: 100%;
+}
+
+.tinyflex-logo:hover .logo-tiny {
+    color: #2c5282;
+    transform: translateY(-1px);
+}
+
+.tinyflex-logo:hover .logo-flex {
+    letter-spacing: 1px;
+    color: #4299e1;
+}
+
+.logo-secondary {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: #4a5568;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    margin-top: 3px;
+    transition: all 0.3s ease;
+}
+
+.tinyflex-logo:hover .logo-secondary {
+    color: #4299e1;
+    letter-spacing: 2px;
+}
+
+/* Loading animation - Container expands on load */
+@keyframes container-load {
+    0% {
+        width: 20px;
+        height: 12px;
+        opacity: 0;
+    }
+    50% {
+        width: 40px;
+        height: 24px;
+        opacity: 1;
+    }
+    100% {
+        width: 40px;
+        height: 24px;
+        opacity: 1;
+    }
+}
+
+.container-base {
+    animation: container-load 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;
+}
+
+@keyframes expand-load {
+    0% {
+        width: 0;
+        opacity: 0;
+        right: -20px;
+    }
+    70% {
+        width: 0;
+        opacity: 0;
+        right: -20px;
+    }
+    100% {
+        width: 0;
+        opacity: 0;
+        right: -20px;
+    }
+}
+
+.expandable-section {
+    animation: expand-load 1.5s ease both;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo-mark {
+        width: 42px;
+        height: 42px;
+        margin-right: 10px;
+    }
+    
+    .container-base {
+        width: 34px;
+        height: 20px;
+    }
+    
+    .tinyflex-logo:hover .container-base {
+        width: 50px;
+        height: 25px;
+    }
+    
+    .expandable-section {
+        right: -16px;
+        top: 3px;
+        height: 14px;
+    }
+    
+    .tinyflex-logo:hover .expandable-section {
+        width: 16px;
+        right: -20px;
+    }
+    
+    .logo-primary {
+        font-size: 1.3rem;
+    }
+    
+    .logo-secondary {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-mark {
+        width: 36px;
+        height: 36px;
+        margin-right: 8px;
+    }
+    
+    .logo-primary {
+        font-size: 1.1rem;
+    }
+    
+    .logo-secondary {
+        font-size: 0.65rem;
+        letter-spacing: 1.2px;
+    }
+}
+
+/* Logo explanation overlay (for demo) */
+.logo-explanation {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 300px;
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    z-index: 1000;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: #4a5568;
+}
+
+.tinyflex-logo:hover .logo-explanation {
+    opacity: 1;
+    transform: translateY(5px);
+}
+
+.logo-explanation h4 {
+    margin: 0 0 8px 0;
+    color: #2c5282;
+    font-size: 0.9rem;
+}
+
+.logo-explanation ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.logo-explanation li {
+    margin-bottom: 4px;
+}
